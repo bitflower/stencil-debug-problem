@@ -18,3 +18,9 @@ Terminal output of npm run dev (see the `node.js` import):
 [ WARN  ]  app-home, my-app: 'util' is imported by commonjs-external:util, but could not be resolved – treating it as
            an external dependency
 ```
+
+In the browser (Chrome 64) we get:
+
+```terminal
+TypeError: Failed to resolve module specifier "tty". Relative references must start with either "/", "./", or "../".
+```
