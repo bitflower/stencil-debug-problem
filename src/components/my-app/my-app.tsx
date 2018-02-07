@@ -1,11 +1,17 @@
 import { Component } from '@stencil/core';
 
+import * as debug from 'debug';
 
 @Component({
   tag: 'my-app',
   styleUrl: 'my-app.scss'
 })
 export class MyApp {
+  compenentWillLoad() {
+    const console: Function = debug('my-logger');
+
+    console('something happened');
+  }
 
   render() {
     return (
@@ -16,11 +22,9 @@ export class MyApp {
 
         <main>
           <stencil-router>
-            <stencil-route url='/' component='app-home' exact={true}>
-            </stencil-route>
+            <stencil-route url="/" component="app-home" exact={true} />
 
-            <stencil-route url='/profile/:name' component='app-profile'>
-            </stencil-route>
+            <stencil-route url="/profile/:name" component="app-profile" />
           </stencil-router>
         </main>
       </div>
