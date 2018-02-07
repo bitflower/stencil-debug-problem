@@ -24,3 +24,5 @@ In the browser (Chrome 64) we get:
 ```terminal
 TypeError: Failed to resolve module specifier "tty". Relative references must start with either "/", "./", or "../".
 ```
+
+![alt text](https://github.com/bitflower/stencil-debug-problem/raw/master/console.png 'Logo Title Text 1')
