@@ -1,17 +1,23 @@
 import { Component } from '@stencil/core';
 
-import * as debug from 'debug';
+import debug from 'debug';
 
 @Component({
   tag: 'my-app',
   styleUrl: 'my-app.scss'
 })
 export class MyApp {
-  compenentWillLoad() {
-    const console: Function = debug('my-logger');
+  private debug; any;
+  componentWillLoad() {
+    this.debug = debug('my-logger');
 
-    console('something happened');
+    this.debug('something happened');
   }
+
+  componentDidLoad() {
+    //this.debug('The component has been rendered');
+  }
+
 
   render() {
     return (
