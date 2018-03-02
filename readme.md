@@ -1,5 +1,7 @@
 # Stencil App Starter with "debug" problem (npm install debug)
 
+> Related ticket: [#494](https://github.com/ionic-team/stencil/issues/494)
+
 The "debug" module is added as `node.js` instead of `browser.js` because the stencil compiler is running "on the server" with node.js during compile time.
 However the created bundle is running in the browser later on so the browser.js should be included in the bundle becuase node.js tries to access the node internal "process" property.
 
