@@ -13,6 +13,8 @@ declare global {
   interface HTMLStencilElement extends HTMLElement {
     componentOnReady(): Promise<this>;
     componentOnReady(done: (ele?: this) => void): void;
+
+    forceUpdate(): void;
   }
 
   interface HTMLAttributes {}
@@ -49,6 +51,7 @@ declare global {
   namespace JSXElements {
     export interface AppHomeAttributes extends HTMLAttributes {
       
+      
     }
   }
 }
@@ -79,6 +82,7 @@ declare global {
   namespace JSXElements {
     export interface AppProfileAttributes extends HTMLAttributes {
       match?: MatchResults;
+      
     }
   }
 }
@@ -108,6 +112,7 @@ declare global {
   }
   namespace JSXElements {
     export interface MyAppAttributes extends HTMLAttributes {
+      
       
     }
   }
